@@ -65,7 +65,7 @@ def start_recording1(threadname):
                     rate=SAMPLE_RATE,
                     input=True,
                     frames_per_buffer=CHUNK,
-                    input_device_index=1)
+                    input_device_index=11)
     data1 = []
     voiced_confidences1 = []
     global new_confidence1
@@ -92,7 +92,7 @@ def start_recording2(threadname):
                     rate=SAMPLE_RATE,
                     input=True,
                     frames_per_buffer=CHUNK,
-                    input_device_index=2)
+                    input_device_index=12)
     data2 = []
     voiced_confidences2 = []
     global new_confidence2

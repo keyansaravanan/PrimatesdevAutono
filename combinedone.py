@@ -157,8 +157,8 @@ def start_webcam(threadname):
     connection = server_socket.accept()[0].makefile('rb')
     vid = cv2.VideoCapture(0
     '''
-    vid1=cv2.VideoCapture(1)
-    vid2=cv2.VideoCapture(2)
+    vid1=cv2.VideoCapture(0)
+    vid2=cv2.VideoCapture(1)
     while True:
         #image_len = struct.unpack('<L', connection.read(struct.calcsize('<L')))[0]
 

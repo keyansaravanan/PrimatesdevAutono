@@ -1,14 +1,9 @@
-from keras.models import load_model
 import numpy as np
-from vggish_input import waveform_to_examples
-import ubicoustics
 import pyaudio
 from pathlib import Path
 import time
 import argparse
-import wget
 import os
-from reprint import output
 from helpers import Interpolator, ratio_to_db, dbFS, rangemap
 global db1
 # thresholds
@@ -19,7 +14,7 @@ DBLEVEL_THRES = -40 # dB
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
 RATE = 16000
-CHUNK = int(RATE / 10)
+CHUNK = RATE
 MICROPHONES_DESCRIPTION = []
 FPS = 60.0
 OUTPUT_LINES = 33

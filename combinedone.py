@@ -44,7 +44,6 @@ audio = pyaudio.PyAudio()
 frames_to_record = 20 
 frame_duration_ms = 250
 
-from jupyterplot import ProgressPlot
 import threading
 
 
@@ -77,7 +76,6 @@ def start_recording1(threadname):
     #pp1.finalize()
     
     
-from jupyterplot import ProgressPlot
 import threading
 
 

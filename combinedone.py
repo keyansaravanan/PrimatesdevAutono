@@ -13,7 +13,30 @@ new_confidence1=0
 new_confidence2=0
 import config
 import onnxruntime
-    
+
+import io
+import socket
+import struct
+from PIL import Image
+import cv2
+import numpy
+import sys
+import time
+import threading
+
+FORMAT = pyaudio.paInt16
+CHANNELS = 1
+SAMPLE_RATE = 16000
+CHUNK = int(SAMPLE_RATE / 10)
+audio = pyaudio.PyAudio()
+
+frames_to_record = 20 
+frame_duration_ms = 250
+
+
+
+continue_recording = True
+
 def init_onnx_model(model_path: str):
     return onnxruntime.InferenceSession(model_path)
     
@@ -34,20 +57,6 @@ def int2float(sound):
         sound *= 1/abs_max
     sound = sound.squeeze() 
     return sound
-
-FORMAT = pyaudio.paInt16
-CHANNELS = 1
-SAMPLE_RATE = 16000
-CHUNK = int(SAMPLE_RATE / 10)
-audio = pyaudio.PyAudio()
-
-frames_to_record = 20 
-frame_duration_ms = 250
-
-import threading
-
-
-continue_recording = True
 
 def start_recording1(threadname):
     import config
@@ -75,9 +84,6 @@ def start_recording1(threadname):
         #pp1.update(new_confidence1)
     #pp1.finalize()
     
-    
-import threading
-
 
 def start_recording2(threadname):
     import config
@@ -105,14 +111,6 @@ def start_recording2(threadname):
         #pp2.update(new_confidence2)
     #pp2.finalize()
 
-import io
-import socket
-import struct
-from PIL import Image
-import cv2
-import numpy
-import sys
-import time
 
 def decisionblockforcameraone(threadname):
     while True:

@@ -7,8 +7,6 @@ import matplotlib
 import matplotlib.pylab as plt
 #torchaudio.set_audio_backend("soundfile")
 import pyaudio
-global new_confidence1
-global new_confidence2
 new_confidence1=0
 new_confidence2=0
 import config

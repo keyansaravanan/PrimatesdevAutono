@@ -65,7 +65,6 @@ stream1 = audio.open(format=FORMAT,
                 input_device_index=11)
 data1 = []
 voiced_confidences1 = []
-global new_confidence1
 continue_recording1 = True
 #pp1 = ProgressPlot(plot_names=["Primates Dev Detector"],line_names=["speech probabilities"], x_label="audio chunks")
 

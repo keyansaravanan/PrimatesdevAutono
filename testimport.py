@@ -62,7 +62,7 @@ stream1 = audio.open(format=FORMAT,
                 rate=SAMPLE_RATE,
                 input=True,
                 frames_per_buffer=CHUNK,
-                input_device_index=11)
+                input_device_index=2)
 data1 = []
 voiced_confidences1 = []
 continue_recording1 = True

@@ -7,7 +7,7 @@ RATE = 16000
 CHUNK = 1024
 RECORD_SECONDS = 5
 WAVE_OUTPUT_FILENAME = "pytest.wav"
-MIC_INDEX = 3
+MIC_INDEX = 1
  
 audio = pyaudio.PyAudio()
  

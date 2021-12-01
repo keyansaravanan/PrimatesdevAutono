@@ -22,7 +22,7 @@ dispW=640
 dispH=480
 camSet='nvarguscamerasrc !  video/x-raw(memory:NVMM), width=3264, height=2464, format=NV12, framerate=21/1 ! nvvidconv flip-method='+str(flip)+' ! video/x-raw, width='+str(dispW)+', height='+str(dispH)+', format=BGRx ! videoconvert ! video/x-raw, format=BGR ! appsink'
 cam1=vStream(1,dispW,dispH)
-cam2=vStream(0,dispW,dispH)
+cam2=vStream(2,dispW,dispH)
 font=cv2.FONT_HERSHEY_SIMPLEX
 startTime=time.time()
 dtav=0

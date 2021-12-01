@@ -71,10 +71,4 @@ continue_recording1 = True
 while continue_recording1:
     audio_chunk1 = stream1.read(int(SAMPLE_RATE * frame_duration_ms / 1000.0))
     data1.append(audio_chunk1)
-    audio_int161 = np.frombuffer(audio_chunk1, np.int16)
-    audio_float321 = int2float(audio_int161)
-    vad_outs1 = validate(model, torch.from_numpy(audio_int161))
-    new_confidence1 = vad_outs1[:,1].numpy()[0].item()
-    config.nc1=new_confidence1
-    voiced_confidences1.append(new_confidence1)
-    print(new_confidence1)
+    print(data1)

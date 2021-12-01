@@ -14,5 +14,5 @@ COPY assets/*whl /root/
 ENV PATH=/usr/local/cuda/bin:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ENV LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib:
 
-CMD ["bash"]
+CMD ["sh"]
 WORKDIR /root
